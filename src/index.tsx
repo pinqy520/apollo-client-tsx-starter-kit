@@ -8,13 +8,13 @@ render(<AppContainer><App /></AppContainer>, document.querySelector("#app"));
 var module: any = module
 
 if (module && module['hot']) {
-    module.hot.accept('./containers/app', () => {
-        const App = require('./containers/app').default;
-        render(
-            <AppContainer>
-                <App />
-            </AppContainer>,
-            document.querySelector("#app")
-        );
-    });
+  module.hot.accept('./containers/app', () => {
+    const App = require('./containers/app').default;
+    render(
+      <AppContainer>
+        <App />
+      </AppContainer>,
+      document.querySelector("#app")
+    );
+  });
 }

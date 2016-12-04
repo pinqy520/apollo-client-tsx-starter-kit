@@ -16,12 +16,17 @@
   "license": "MIT",
   "homepage": "https://github.com/pinqy520/simple-tsx-starter-kit#readme",
   "dependencies": {
+    "@types/chai": "^3.4.34",
     "@types/react": "^0.14.52",
     "@types/react-dom": "^0.14.19",
+    "apollo-client": "^0.5.10",
+    "graphql-tag": "^1.1.2",
     "node-sass": "^3.13.0",
     "react": "15.4.1",
+    "react-apollo": "^0.6.0",
     "react-dom": "15.4.1",
-    "sass-loader": "^4.0.2"
+    "sass-loader": "^4.0.2",
+    "typed-graphql": "^1.0.2"
   },
   "devDependencies": {
     "@types/node": "0.0.2",
