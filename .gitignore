@@ -34,3 +34,6 @@ yarn.log
 
 # Awesome Typescript Loader
 .awcache
+
+# VS Code
+.vscode
