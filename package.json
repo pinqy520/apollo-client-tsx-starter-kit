@@ -1,7 +1,7 @@
 {
-  "name": "simple-tsx-starter-kit",
+  "name": "apollo-tsx-starter-kit",
   "version": "0.0.1",
-  "description": "Minimal React Webpack TypeScript Starter Kit",
+  "description": "React Webpack TypeScript Apollo Client Starter Kit For GraphQL APIs",
   "main": "''",
   "scripts": {
     "build": "webpack --config webpack.production.config.js --progress --profile --colors",
@@ -10,11 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pinqy520/simple-tsx-starter-kit"
+    "url": "https://github.com/pinqy520/apollo-tsx-starter-kit"
   },
   "author": "Huang Qi",
   "license": "MIT",
-  "homepage": "https://github.com/pinqy520/simple-tsx-starter-kit#readme",
+  "homepage": "https://github.com/pinqy520/apollo-tsx-starter-kit#readme",
   "dependencies": {
     "@types/chai": "^3.4.34",
     "@types/react": "^0.14.52",
