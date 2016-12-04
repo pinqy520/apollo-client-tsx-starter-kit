@@ -1,5 +1,5 @@
 {
-  "name": "apollo-tsx-client-starter-kit",
+  "name": "apollo-client-tsx-starter-kit",
   "version": "0.0.1",
   "description": "React Webpack TypeScript Apollo Client Side Starter Kit For GraphQL APIs",
   "main": "''",
@@ -10,11 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pinqy520/apollo-tsx-client-starter-kit"
+    "url": "https://github.com/pinqy520/apollo-client-tsx-starter-kit"
   },
   "author": "Huang Qi",
   "license": "MIT",
-  "homepage": "https://github.com/pinqy520/apollo-tsx-client-starter-kit#readme",
+  "homepage": "https://github.com/pinqy520/apollo-client-tsx-starter-kit#readme",
   "dependencies": {
     "@types/chai": "^3.4.34",
     "@types/react": "^0.14.52",
