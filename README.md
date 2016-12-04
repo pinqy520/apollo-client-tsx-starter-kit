@@ -1,13 +1,13 @@
-# apollo-tsx-starter-kit
+# apollo-tsx-client-starter-kit
 
-> React Webpack TypeScript Apollo Client Starter Kit For GraphQL APIs
+> React Webpack TypeScript Apollo Client Side Starter Kit For GraphQL APIs
 
 Based on [alicoding/react-webpack-babel](https://github.com/alicoding/react-webpack-babel)
 
 Add [apollo-client](https://github.com/apollostack/apollo-client) to [simple-tsx-starter-kit](https://github.com/pinqy520/simple-tsx-starter-kit)
 
 ```
-git clone https://github.com/pinqy520/apollo-tsx-starter-kit.git
+git clone https://github.com/pinqy520/apollo-tsx-client-starter-kit.git
 
 npm install
 
