@@ -8,21 +8,22 @@ var WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 
 // local css modules
 loaders.push({
-	test: /[\/\\]src[\/\\].*\.css/,
-	exclude: /(node_modules|bower_components|public)/,
-	loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')
+	test: /\.css$/,
+	exclude: ['node_modules'],
+	loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader' })
 });
 
 // local scss modules
 loaders.push({
-	test: /[\/\\]src[\/\\].*\.scss/,
-	exclude: /(node_modules|bower_components|public)/,
-	loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass')
+	test: /\.scss$/,
+	exclude: ['node_modules'],
+	loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!sass-loader' })
 });
 // global css files
 loaders.push({
-	test: /[\/\\](node_modules|global)[\/\\].*\.css$/,
-	loader: ExtractTextPlugin.extract('style', 'css')
+	test: /\.css$/,
+	include: ['node_modules'],
+	loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
 });
 
 module.exports = {
@@ -34,7 +35,7 @@ module.exports = {
 		filename: '[chunkhash].js'
 	},
 	resolve: {
-		extensions: ['', '.ts', '.tsx', '.js', '.jsx']
+		extensions: ['.ts', '.tsx', '.js', '.jsx']
 	},
 	module: {
 		loaders
@@ -54,14 +55,15 @@ module.exports = {
 				drop_debugger: true
 			}
 		}),
-		new webpack.optimize.OccurenceOrderPlugin(),
-		new ExtractTextPlugin('[contenthash].css', {
+		// new webpack.optimize.OccurenceOrderPlugin(),
+		new ExtractTextPlugin({ 
+			filename: '[contenthash].css', 
 			allChunks: true
 		}),
 		new HtmlWebpackPlugin({
 			template: './src/template.html',
 			title: 'Webpack App'
 		}),
-		new webpack.optimize.DedupePlugin()
+		// new webpack.optimize.DedupePlugin()
 	]
 };
