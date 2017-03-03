@@ -30,7 +30,7 @@ node_modules
 public
 
 # Yarn
-yarn.log
+yarn.lock
 
 # Awesome Typescript Loader
 .awcache
